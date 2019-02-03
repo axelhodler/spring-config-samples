@@ -18,10 +18,13 @@ public class ConfigApplicationTests {
 
 	@Autowired
 	FirstConfig firstConfig;
+	@Autowired
+	SecondConfig secondConfig;
 
 	@Test
 	public void properties_are_present() {
 		assertThat(firstConfig.getLabel()).isEqualTo("production");
+		assertThat(secondConfig.getComposite()).isEqualTo("compositeValue");
 	}
 
 }
