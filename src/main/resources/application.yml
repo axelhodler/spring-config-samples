@@ -3,3 +3,8 @@ foo:
     label: production
     server:
       composite: compositeValue
+
+outer:
+  text: outer
+  inner:
+    innerText: inner
