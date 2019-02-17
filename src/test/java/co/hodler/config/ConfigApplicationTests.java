@@ -18,6 +18,8 @@ public class ConfigApplicationTests {
 	SecondConfig secondConfig;
 	@Autowired
 	NestedConfig nestedConfig;
+	@Autowired
+	DefaultValueConfig defaultValueConfig;
 
 	@Test
 	public void properties_are_present() {
@@ -25,6 +27,7 @@ public class ConfigApplicationTests {
 		assertThat(secondConfig.getComposite()).isEqualTo("compositeValue");
 		assertThat(nestedConfig.getText()).isEqualTo("outer");
 		assertThat(nestedConfig.getInner().getInnerText()).isEqualTo("inner");
+		assertThat(defaultValueConfig.getEmptyAsDefault()).isEmpty();
 	}
 
 }
